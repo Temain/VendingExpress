@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>@ViewData["Title"] - VendingExpress</title>
+
+    <environment include="Development">
+        <link href="favicon.png" rel="shortcut icon">
+        <link href="apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="//fast.fonts.net/cssapi/175a63a1-3f26-476a-ab32-4e21cbdb8be2.css" rel="stylesheet" type="text/css">
+        <link href="~/lib/select2/dist/css/select2.min.css" rel="stylesheet">
+        <link href="~/lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <link href="~/lib/dropzone/dist/dropzone.css" rel="stylesheet">
+        <link href="~/lib/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+        <link href="~/lib/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="~/lib/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+        <link href="~/css/main.css?version=2.6" rel="stylesheet">
+    </environment>
+    <environment exclude="Development">
+        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
+    </environment>
+</head>
+<body>
+    <div class="all-wrapper menu-side with-side-panel">
+        <div class="layout-w">
+            @await Html.PartialAsync("_Menu")
+
+            <div class="content-w">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="display-type"></div>
+    </div>
+
+    @*@*<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-page="/Index" class="navbar-brand">VendingExpress</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/About">About</a></li>
+                    <li><a asp-page="/Contact">Contact</a></li>
+                </ul>
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - VendingExpress</p>
+        </footer>
+    </div>*@
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/moment/moment.js"></script>
+        <script src="~/lib/chart.js/dist/Chart.min.js"></script>
+        <script src="~/lib/select2/dist/js/select2.full.min.js"></script>
+        <script src="~/lib/ckeditor/ckeditor.js"></script>
+        <script src="~/lib/bootstrap-validator/dist/validator.min.js"></script>
+        <script src="~/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="~/lib/dropzone/dist/dropzone.js"></script>
+        <script src="~/lib/editable-table/mindmup-editabletable.js"></script>
+        <script src="~/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="~/lib/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="~/lib/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="~/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/lib/bootstrap/js/dist/util.js"></script>
+        <script src="~/lib/bootstrap/js/dist/tab.js"></script>
+        <script src="~/js/main.js?version=2.6"></script>
+    </environment>
+    @*<environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>*@
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
