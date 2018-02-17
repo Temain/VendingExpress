@@ -1,5 +1,7 @@
-﻿<div class="menu-mobile menu-activated-on-click color-scheme-dark">
-    <div class="mm-logo-buttons-w">
+﻿@inject UserManager<ApplicationUser> UserManager
+
+<div class="menu-mobile menu-activated-on-click color-scheme-dark">
+    @*<div class="mm-logo-buttons-w">
         <a class="mm-logo" href="index.html"><img src="img/logo.png"><span>Clean Admin</span></a>
         <div class="mm-buttons">
             <div class="content-panel-open">
@@ -9,7 +11,7 @@
                 <div class="os-icon os-icon-hamburger-menu-1"></div>
             </div>
         </div>
-    </div>
+    </div>*@
     <div class="menu-and-user">
         <div class="logged-user-w">
             <div class="avatar-w">
@@ -17,10 +19,11 @@
             </div>
             <div class="logged-user-info-w">
                 <div class="logged-user-name">
-                    Maria Gomez
+                    @*@UserManager.GetUserName(User)*@
+                    Администратор
                 </div>
                 <div class="logged-user-role">
-                    Administrator
+                    Администратор
                 </div>
             </div>
         </div>
@@ -264,32 +267,32 @@
     </div>
 </div>
 <div class="desktop-menu menu-side-w menu-activated-on-click">
-    <div class="logo-w">
+    <div class="logo-w" style="visibility:hidden">
         <a class="logo" href="index.html"><img src="img/logo.png"><span>Clean Admin</span></a>
     </div>
     <div class="menu-and-user">
         <div class="logged-user-w">
             <div class="avatar-w">
-                <img alt="" src="img/avatar1.jpg">
+                <img alt="" src="img/avatar.png">
             </div>
             <div class="logged-user-info-w">
                 <div class="logged-user-name">
-                    Maria Gomez
+                    Вендинг-Экспресс
                 </div>
                 <div class="logged-user-role">
-                    Administrator
+                    Администратор
                 </div>
             </div>
             <div class="logged-user-menu">
                 <div class="avatar-w">
-                    <img alt="" src="img/avatar1.jpg">
+                    <img alt="" src="img/avatar.png">
                 </div>
                 <div class="logged-user-info-w">
                     <div class="logged-user-name">
-                        Maria Gomez
+                        Вендинг-Экспресс
                     </div>
                     <div class="logged-user-role">
-                        Administrator
+                        Администратор
                     </div>
                 </div>
                 <div class="bg-icon">
@@ -297,19 +300,19 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="#"><i class="os-icon os-icon-mail-01"></i><span>Incoming Mail</span></a>
+                        <a href="#"><i class="os-icon os-icon-mail-01"></i><span>Сообщения</span></a>
                     </li>
                     <li>
-                        <a href="users_profile_big.html"><i class="os-icon os-icon-user-male-circle2"></i><span>Profile Details</span></a>
+                        <a href="users_profile_big.html"><i class="os-icon os-icon-user-male-circle2"></i><span>Профиль</span></a>
                     </li>
-                    <li>
+                    @*<li>
                         <a href="users_profile_small.html"><i class="os-icon os-icon-coins-4"></i><span>Billing Details</span></a>
+                    </li>*@
+                    <li>
+                        <a href="#"><i class="os-icon os-icon-others-43"></i><span>Оповещения</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="os-icon os-icon-others-43"></i><span>Notifications</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                        <a href="#"><i class="os-icon os-icon-signs-11"></i><span>Выход</span></a>
                     </li>
                 </ul>
             </div>
@@ -320,44 +323,47 @@
                     <div class="icon-w">
                         <div class="os-icon os-icon-window-content"></div>
                     </div>
-                    <span>Dashboard</span>
+                    <span>Заказ товаров</span>
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="index.html">Dashboard 1</a>
+                        <a href="index.html">Товары</a>
                     </li>
                     <li>
-                        <a href="apps_projects.html">Dashboard 2</a>
+                        <a href="apps_projects.html">Прайсы</a>
                     </li>
                     <li>
+                        <a href="apps_projects.html">Заявки</a>
+                    </li>
+                    @*<li>
                         <a href="layouts_menu_top_image.html">Dashboard 3</a>
-                    </li>
+                    </li>*@
                 </ul>
             </li>
-            <li class="has-sub-menu">
+            <li>
                 <a href="#">
                     <div class="icon-w">
                         <div class="os-icon os-icon-user-male-circle"></div>
                     </div>
-                    <span>User Profiles</span>
+                    <span>Поставщики</span>
                 </a>
-                <ul class="sub-menu">
+                @*<ul class="sub-menu">
                     <li>
-                        <a href="users_profile_big.html">Big Profile</a>
+                        <a href="users_profile_big.html">Список</a>
                     </li>
                     <li>
                         <a href="users_profile_small.html">Compact Profile</a>
                     </li>
-                </ul>
+                </ul>*@
             </li>
-            <li class="has-sub-menu">
+            <li>
                 <a href="#">
                     <div class="icon-w">
                         <div class="os-icon os-icon-delivery-box-2"></div>
                     </div>
-                    <span>Applications</span>
+                    <span>Склады</span>
                 </a>
-                <ul class="sub-menu">
+                @*<ul class="sub-menu">
                     <li>
                         <a href="apps_email.html">Email Application</a>
                     </li>
@@ -373,6 +379,31 @@
                     <li>
                         <a href="misc_calendar.html">Calendar</a>
                     </li>
+                </ul>*@
+            </li>
+            <li class="has-sub-menu">
+                <a href="#">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-tasks-checked"></div>
+                    </div>
+                    <span>Накладные</span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="forms_regular.html">Regular Forms</a>
+                    </li>
+                    <li>
+                        <a href="forms_validation.html">Form Validation</a>
+                    </li>
+                    <li>
+                        <a href="forms_wizard.html">Form Wizard</a>
+                    </li>
+                    <li>
+                        <a href="forms_uploads.html">File Uploads</a>
+                    </li>
+                    <li>
+                        <a href="forms_wisiwig.html">Wisiwig Editor</a>
+                    </li>
                 </ul>
             </li>
             <li class="has-sub-menu">
@@ -380,7 +411,7 @@
                     <div class="icon-w">
                         <div class="os-icon os-icon-newspaper"></div>
                     </div>
-                    <span>Pages</span>
+                    <span>Отказы</span>
                 </a>
                 <ul class="sub-menu">
                     <li>
@@ -406,32 +437,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="has-sub-menu">
-                <a href="#">
-                    <div class="icon-w">
-                        <div class="os-icon os-icon-tasks-checked"></div>
-                    </div>
-                    <span>Forms</span>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="forms_regular.html">Regular Forms</a>
-                    </li>
-                    <li>
-                        <a href="forms_validation.html">Form Validation</a>
-                    </li>
-                    <li>
-                        <a href="forms_wizard.html">Form Wizard</a>
-                    </li>
-                    <li>
-                        <a href="forms_uploads.html">File Uploads</a>
-                    </li>
-                    <li>
-                        <a href="forms_wisiwig.html">Wisiwig Editor</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="has-sub-menu">
+            @*<li class="has-sub-menu">
                 <a href="#">
                     <div class="icon-w">
                         <div class="os-icon os-icon-grid-squares"></div>
@@ -449,8 +455,8 @@
                         <a href="tables_editable.html">Editable Tables</a>
                     </li>
                 </ul>
-            </li>
-            <li class="has-sub-menu">
+            </li>*@
+            @*<li class="has-sub-menu">
                 <a href="#">
                     <div class="icon-w">
                         <div class="os-icon os-icon-hierarchy-structure-2"></div>
@@ -483,8 +489,8 @@
                         <a href="layouts_menu_top_image.html">Top Menu Image</a>
                     </li>
                 </ul>
-            </li>
-            <li class="has-sub-menu">
+            </li>*@
+            @*<li class="has-sub-menu">
                 <a href="#">
                     <div class="icon-w">
                         <div class="os-icon os-icon-robot-1"></div>
@@ -538,18 +544,7 @@
                         <a href="icon_fonts_light_admin.html">Light Admin</a>
                     </li>
                 </ul>
-            </li>
+            </li>*@
         </ul>
-        <div class="side-menu-magic">
-            <h4>
-                Light Admin
-            </h4>
-            <p>
-                Clean Bootstrap 4 Template
-            </p>
-            <div class="btn-w">
-                <a class="btn btn-white btn-rounded" href="https://themeforest.net/item/light-admin-clean-bootstrap-dashboard-html-template/19760124?ref=Osetin" target="_blank">Purchase Now</a>
-            </div>
-        </div>
     </div>
 </div>
