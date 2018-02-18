@@ -1,0 +1,196 @@
+﻿@page
+@model VendingExpress.Web.Pages.OrdersModel
+@{
+    ViewData["Title"] = "Список заказов";
+}
+
+<ul class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index.html">Список заявок</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="index.html">Текущие</a>
+    </li>
+</ul>
+<div class="content-panel-toggler">
+    <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
+</div>
+<div class="top-menu-secondary">
+    <ul>
+        <li class="active">
+            <a href="#">Текущие</a>
+        </li>
+        <li>
+            <a href="#">Отправленные</a>
+        </li>
+        <li>
+            <a href="#">Доставленные</a>
+        </li>
+        <li>
+            <a href="#">Козина</a>
+        </li>
+    </ul>
+</div>
+<div class="content-i">
+    <div class="content-box" style="padding-top: 2em;">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="element-wrapper">
+                    <div class="element-box">
+                        @*<div style="padding: 0 1em;">
+            <input class="form-control form-control-sm rounded" placeholder="Поиск по товарам..." type="text" style="margin-bottom: 1em;">
+        </div>*@
+
+                        <div class="table-responsive" style="height: 32em; overflow: auto;">
+                            <table class="table table-lightborder table-hover table-sm fixed-tr-height">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Точка</th>
+                                        <th>Поставщик</th>
+                                        @*<th>Дата</th>*@
+                                        <th class="text-right">Сумма</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="font-sm">
+                                        <td>
+                                            <label class="custom-control custom-checkbox">
+                                                <input id="chk1" type="checkbox" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                            </label>
+                                        </td>
+                                        <td>Склад #1</td>
+                                        <td>ООО «Штраус»</td>
+                                        @*<td>15.02.2018</td>*@
+                                        <td class="text-right">4942 руб.</td>
+                                        <td>
+                                            <i class="icon-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="font-sm">
+                                        <td>
+                                            <label class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                            </label>
+                                        </td>
+                                        <td>Склад #2</td>
+                                        <td>ООО «Фирма ВАЛЕО»</td>
+                                        @*<td>10.02.2018</td>*@
+                                        <td class="text-right">9142 руб.</td>
+                                        <td>
+                                            <i class="icon-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <button type="button" class="btn btn-primary">Отправить</button>
+                        @*<button type="button" class="btn btn-danger" style="float: right;">Удалить</button>*@
+
+                        @*<div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Middle</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="element-wrapper" style="padding-bottom: 0;">
+                    <div class="element-box">
+                        <div class="table-responsive"  style="height: 34.6em;">
+                            <table class="table table-lightborder table-hover table-sm fixed-tr-height">
+                                <thead>
+                                    <tr>
+                                        <th class="">
+                                            Наименование
+                                        </th>
+                                        <th class="text-center">
+                                            Количество
+                                        </th>
+                                        <th class="text-center">
+                                            Доставлено
+                                        </th>
+                                        <th class="text-right">
+                                            Цена
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="font-sm">
+                                        <td class="nowrap">
+                                            Путассу сушеная соленая с перцем, 35 г
+                                        </td>
+                                        <td class="text-center">
+                                            20
+                                        </td>
+                                        <td class="text-center">
+                                            -
+                                        </td>
+                                        <td class="text-right">
+                                            1512 руб.
+                                        </td>
+                                        <td>
+                                            <i class="icon-pencil text-success"></i>
+                                            <i class="icon-trash text-danger"></i>
+                                            @*<i class="fa fa-trash text-danger" style="font-size:1.2em;"></i>*@
+                                        </td>
+                                    </tr>
+                                    <tr class="font-sm">
+                                        <td class="nowrap">
+                                            Кукуруза тм "Coruza" с солью, 100 г
+                                        </td>
+                                        <td class="text-center">
+                                            25
+                                        </td>
+                                        <td class="text-center">
+                                            -
+                                        </td>
+                                        <td class="text-right">
+                                            2480 руб.
+                                        </td>
+                                        <td>
+                                            <i class="icon-pencil text-success"></i>
+                                            <i class="icon-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="font-sm">
+                                        <td class="nowrap">
+                                            Сухарики-гренки "HEALTHY", 100 г
+                                        </td>
+                                        <td class="text-center">
+                                            10
+                                        </td>
+                                        <td class="text-center">
+                                            -
+                                        </td>
+                                        <td class="text-right">
+                                            950 руб.
+                                        </td>
+                                        <td>
+                                            <i class="icon-pencil text-success"></i>
+                                            <i class="icon-trash text-danger"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('#chk1').prop('checked', true);
+        });
+    </script>
+}

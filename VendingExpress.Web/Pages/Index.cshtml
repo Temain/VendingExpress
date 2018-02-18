@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Заказ товаров";
 }
 
 <ul class="breadcrumb">
@@ -16,16 +16,20 @@
     <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
 </div>
 <div class="content-i">
-    <div class="content-box" style="padding-top: 2em;">
+    <div class="content-box" style="padding-top: 0em;">
+        <div style="padding-bottom: 1em;">
+            <strong>Выберите товар и предложение поставщика для заказа товара. Укажите количество товара для оформления заявки.</strong>
+        </div>
+
         <div class="row">
             <div class="col-sm-5">
                 <div class="element-wrapper">
                     <h6 class="element-header" style="margin-bottom: 1em;">
-                        Список товаров                      
+                        Список товаров
                     </h6>
                     <div class="element-box">
                         <div style="padding: 0 1em;">
-                            <input class="form-control form-control-sm rounded bright" placeholder="Поиск по товарам..." type="text" style="margin-bottom: 1em;">
+                            <input class="form-control form-control-sm rounded" placeholder="Поиск по товарам..." type="text" style="margin-bottom: 1em;">
                         </div>
 
                         <div class="table-responsive" style="height: 32em; overflow: auto;">
@@ -155,7 +159,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>       
+                    </div>
                 </div>
             </div>
             <div class="col-sm-7">
@@ -166,12 +170,12 @@
                     <div class="element-box" style="height: 18.85em;">
                         <div style="margin: 0 0 1em 0em;">
                             <span>Путассу сушеная соленая с перцем</span>
-                            <select class="form-control form-control-sm rounded bright" style="width: 20em;float: right;">
+                            <select class="form-control form-control-sm rounded" style="width: 20em;float: right;">
                                 <option selected="selected" value="">
                                     Точка доставки...
                                 </option>
-                                <option value="Pending">
-                                    Склад #1
+                                <option value="Pending" selected="selected">
+                                    Основной склад
                                 </option>
                                 <option value="Active">
                                     Склад #2
