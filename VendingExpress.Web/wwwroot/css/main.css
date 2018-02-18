@@ -10504,3 +10504,18 @@ Contents:
     padding: 30px; }
   .breadcrumb {
     margin-bottom: 1rem; } }
+
+
+/* Заказ */
+.fixed-tr-height > tbody > tr {
+    height: 3em !important;
+}
+
+.fixed-tr-height > tbody > tr > .font-sm {
+    font-size: 0.8em !important;
+    padding-right: 1em !important;
+}
+
+.fixed-tr-height > tbody > .font-sm {
+    font-size: 0.8em !important;
+}
