@@ -1,0 +1,115 @@
+﻿@page
+@model VendingExpress.Web.Pages.LeaseModel
+@{
+    ViewData["Title"] = "Аренда площадей";
+}
+
+<ul class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index.html">Аренда площадей</a>
+    </li>
+</ul>
+<div class="content-i">
+    <div class="content-box">
+        <div class="element-wrapper">
+            <div class="element-box">
+                <h5 class="form-header">
+                    Аренда площадей
+                </h5>
+                <div class="form-desc">
+                    Список договоров с арендодателями для установки кофейных и снековых автоматов.
+                </div>
+
+                <div class="table-responsive">
+                    <div id="dataTable1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable1_length">
+                                    <label>
+                                        Показать
+                                        <select name="dataTable1_length" aria-controls="dataTable1" class="form-control form-control-sm">
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select> записей
+                                    </label>
+                                </div>
+                            </div><div class="col-sm-12 col-md-6">
+                                <div id="dataTable1_filter" class="dataTables_filter">
+                                    <label>Поиск:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable1"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="dataTable" width="100%" class="table table-striped table-lightfont dataTable" role="grid" aria-describedby="dataTable1_info" style="width: 100%;">
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending">Арендодатель</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Расположение</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Контакты</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Действия</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">Администрация ТЦ Галактика</td>
+                                            <td>ТЦ Галактика 2 этаж</td>
+                                            <td>Потолков А.М. 8 (900) 26-98-152</td>
+                                            <td>
+                                                <i class="icon-pencil text-success"></i>
+                                                <i class="icon-trash text-danger"></i>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td class="sorting_1">Администрация ТЦ Оз Молл</td>
+                                            <td>ТЦ Оз Молл 1 этаж</td>
+                                            <td class="">Куртинов П.П. 8 (918) 65-48-751</td>
+                                            <td>
+                                                <i class="icon-pencil text-success"></i>
+                                                <i class="icon-trash text-danger"></i>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td class="sorting_1">Администрация ТЦ Карнавал</td>
+                                            <td>ТЦ Карнавал 1 этаж</td>
+                                            <td class="">Еривегов Г.Д. 8 (928) 32-23-651</td>
+                                            <td>
+                                                <i class="icon-pencil text-success"></i>
+                                                <i class="icon-trash text-danger"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="dataTables_info" id="dataTable1_info" role="status" aria-live="polite">Показано от 1 до 3 из 3 записей</div>
+                            </div>
+                            <div class="col-sm-12 col-md-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="dataTable1_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous disabled" id="dataTable1_previous">
+                                            <a href="#" aria-controls="dataTable1" data-dt-idx="0" tabindex="0" class="page-link">Предыдущая</a>
+                                        </li>
+                                        <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                        @*<li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>*@
+                                        <li class="paginate_button page-item next" id="dataTable1_next"><a href="#" aria-controls="dataTable1" data-dt-idx="7" tabindex="0" class="page-link">Следующая</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

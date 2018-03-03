@@ -10572,3 +10572,10 @@ Contents:
     .custom-checkbox .custom-control-input:focus ~ .custom-control-indicator {
         box-shadow: none !important;
     }
+
+.automat-size {
+    background-size: 30px !important;
+    background-repeat: no-repeat !important;
+    width: 50px !important;
+    height: 50px !important;
+}

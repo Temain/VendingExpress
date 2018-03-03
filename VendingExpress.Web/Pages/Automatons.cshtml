@@ -1,15 +1,15 @@
 ﻿@page
-@model IndexModel
+@model AutomatonsModel
 @{
-    ViewData["Title"] = "Заказ товаров";
+    ViewData["Title"] = "Заказ кофейных и снековых автоматов";
 }
 
 <ul class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="index.html">Заказ товаров</a>
+        <a href="index.html">Заказ кофейных и снековых автоматов</a>
     </li>
     <li class="breadcrumb-item">
-        <a href="index.html">Товары</a>
+        <a href="index.html">Кофейные и снековые автоматы</a>
     </li>
 </ul>
 <div class="content-panel-toggler">
@@ -18,16 +18,16 @@
 <div class="content-i">
     <div class="content-box" style="padding-top: 1em;">
         @*<div style="padding-bottom: 1.5em;">
-            <strong>Выберите товар и предложение поставщика для заказа товара. Укажите количество товара для оформления заявки.</strong>
+            <strong></strong>
         </div>*@
         <div class="alert alert-info" role="alert">
-            Выберите товар и предложение поставщика для заказа товара. Укажите количество товара для оформления заявки.
+            Выберите автомат и предложение поставщика для заказа товара. Укажите количество автоматов для оформления заявки.
         </div>
         <div class="row">
             <div class="col-sm-5">
                 <div class="element-wrapper">
                     <h6 class="element-header" style="margin-bottom: 1em;">
-                        Список товаров
+                        Список автоматов
                     </h6>
                     <div class="element-box">
                         <div style="padding: 0 1em;">
@@ -41,121 +41,117 @@
                                         <td></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/3korochki.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat1.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm">
-                                            Сухарики "3 корочки",<br /> пшеничные, золотистые, 50 г
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/bogucharochka.jpg)"></div>
-                                            </div>
-                                        </td>
-                                        <td class="font-sm">
-                                            Семечки подсолнечные жареные<br /> "Богучарочка", 40 г
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/mclars.jpg)"></div>
-                                            </div>
-                                        </td>
-                                        <td class="font-sm">
-                                            Картофельные чипсы<br /> ТМ "McLar's", рифленые, 75г
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/blockbuster.jpg)"></div>
-                                            </div>
-                                        </td>
-                                        <td class="font-sm">
-                                            Попкорн ТМ Blockbuster<br /> Экстра масло, 3 шт
+                                            Кофейный автомат <br /> Bianchi BVM 951
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><div class="status-pill green" data-title="Complete" data-toggle="tooltip"></div></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/putassu.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat2.jpg)"></div>
+                                            </div>
+                                        </td>
+                                        <td class="font-sm">
+                                            Кофейный автомат<br /> Saeco Cristallo 600
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="cell-image-list">
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat3.jpg)"></div>
+                                            </div>
+                                        </td>
+                                        <td class="font-sm">
+                                            Снековый автомат<br /> Crane Snack Center 167
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="cell-image-list">
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat4.jpg)"></div>
+                                            </div>
+                                        </td>
+                                        <td class="font-sm">
+                                            Снековый автомат<br />
+                                            Unicum FoodBox Long
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="cell-image-list">
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat5.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm" style="background: #eee;">
-                                            Путассу сушеная соленая<br /> с перцем, 35 г
+                                            Кофейный автомат<br />
+                                            Brio 3 ES6
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/hrusteam.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat6.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm">
-                                            Сухарики воздушные ТМ Хрус Теам<br /> со вкусом краба, 4 шт
+                                            Кофейный автомат<br />
+                                            BIANCHI LEI 400
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/coruza.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat7.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm">
-                                            Кукуруза тм "Coruza"<br /> с солью, 100 г
+                                            Кофейный автомат<br />
+                                            Saeco Diamante
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/freshbox.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat8.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm">
-                                            Батончик глазированный<br /> мюсли ТМ "Fresh Box", 37г
+                                            Снековый автомат<br />
+                                            Saeco BP 36
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/alians.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat9.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm">
-                                            Семечки подсолнечника жареные<br /> ТМ "Альянс", 400г
+                                            Снековый автомат<br />
+                                            FAS «Krystal»
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/sultan.jpg)"></div>
+                                                <div class="cell-img automat-size" style="background-image: url(img/products/automat10.jpg)"></div>
                                             </div>
                                         </td>
                                         <td class="font-sm">
-                                            Семена подсолнечника жареные,<br /> ТМ "Sultan", 100 г
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <div class="cell-image-list">
-                                                <div class="cell-img automat-size" style="background-image: url(img/products/healthy.jpg)"></div>
-                                            </div>
-                                        </td>
-                                        <td class="font-sm">
-                                            Сухарики-гренки "HEALTHY",<br /> 100 г
+                                            Кофейный автомат<br />
+                                            Saeco Cristallo 600
                                         </td>
                                     </tr>
                                 </tbody>
@@ -209,49 +205,37 @@
                                 <tbody>
                                     <tr class="font-sm">
                                         <td class="nowrap">
-                                            ООО «Штраус»
+                                            ООО «Реликт»
                                         </td>
                                         <td class="text-center">
-                                            120
+                                            10
                                         </td>
                                         <td class="text-center">
-                                            75,6 руб.
+                                            115 800 руб.
                                         </td>
                                         <td class="text-right"></td>
-                                    </tr>
-                                    <tr class="font-sm">
-                                        <td class="nowrap">
-                                            ООО «Фирма ВАЛЕО»
-                                        </td>
-                                        <td class="text-center">
-                                            240
-                                        </td>
-                                        <td class="text-center">
-                                            76,1 руб.
-                                        </td>
-                                        <td class="text-right">15</td>
                                     </tr>
                                     <tr class="font-sm">
                                         <td class="nowrap">
                                             ООО «Лотос-Лэнд»
                                         </td>
                                         <td class="text-center">
-                                            180
+                                            12
                                         </td>
                                         <td class="text-center">
-                                            76,4 руб.
+                                            125 000 руб.
                                         </td>
                                         <td class="text-right"></td>
                                     </tr>
                                     <tr class="font-sm">
                                         <td class="nowrap">
-                                            ООО «Реликт»
+                                            ООО «Штраус»
                                         </td>
                                         <td class="text-center">
-                                            750
+                                            5
                                         </td>
                                         <td class="text-center">
-                                            77,2 руб.
+                                            128 999 руб.
                                         </td>
                                         <td class="text-right"></td>
                                     </tr>
@@ -288,30 +272,30 @@
                                 <tbody>
                                     <tr class="font-sm">
                                         <td class="nowrap">
-                                            ООО «Штраус»
+                                            ООО «Реликт»
                                         </td>
                                         <td class="text-center">
-                                            15.02.2018
+                                            19.02.2018
                                         </td>
                                         <td class="text-center">
-                                            1512 руб.
+                                            231 600 руб.
                                         </td>
                                         <td class="text-right">
-                                            20
+                                            2
                                         </td>
                                     </tr>
                                     <tr class="font-sm">
                                         <td class="nowrap">
-                                            ООО «Фирма ВАЛЕО»
+                                            ООО «Лотос-Лэнд»
                                         </td>
                                         <td class="text-center">
-                                            10.02.2018
+                                            29.02.2018
                                         </td>
                                         <td class="text-center">
-                                            761 руб.
+                                            125 000 руб.
                                         </td>
                                         <td class="text-right">
-                                            10
+                                            1
                                         </td>
                                     </tr>
                                 </tbody>

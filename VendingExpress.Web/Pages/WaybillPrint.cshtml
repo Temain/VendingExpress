@@ -1,0 +1,134 @@
+﻿@page
+@model VendingExpress.Web.Pages.WaybillPrintModel
+@{
+    ViewData["Title"] = "Печать накладной";
+}
+
+<ul class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index.html">Накладные</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="index.html">Печать</a>
+    </li>
+</ul>
+<div class="content-i">
+    <div class="content-box">
+        <div class="element-wrapper">
+            <div class="invoice-w">
+                <div class="infos">
+                    <div class="info-1">
+                        <div class="invoice-logo-w">
+                            <img alt="" src="img/logo2.png">
+                        </div>
+                        <div class="company-name">
+                            ООО "Вендинг-Экспресс"
+                        </div>
+                        <div class="company-address">
+                            г.Краснодар, ул.Строителей, д.5, лит.А, 350051
+                        </div>
+                        <div class="company-extra">
+                            тел. 8 (918) 45-81-155
+                        </div>
+                    </div>
+                    <div class="info-2">
+                        <div class="company-name">
+                            ООО "Фирма ВАЛЕО"
+                        </div>
+                        <div class="company-address">
+                            Г МОСКВА,УДАЛЬЦОВА УЛ, Д 32, СТР 2
+                        </div>
+                    </div>
+                </div>
+                <div class="invoice-heading">
+                    <h3>
+                        Товарная накладная
+                    </h3>
+                    <div class="invoice-date">
+                        19 января 2018
+                    </div>
+                </div>
+                <div class="invoice-body">
+                    <div class="invoice-desc">
+                        <div class="desc-label">
+                            Номер
+                        </div>
+                        <div class="desc-value" style="padding-left: 5em;">
+                            №15424
+                        </div>
+                    </div>
+                    <div class="invoice-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Наименование
+                                    </th>
+                                    <th>
+                                        Количество
+                                    </th>
+                                    <th class="text-right">
+                                        Цена
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Снековый автомат <br />
+                                        Unicum FoodBox Long
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="text-right">
+                                        118 000 руб.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Кофейный автомат <br />
+                                        Saeco Diamante
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td class="text-right">
+                                        234 000 руб.
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>
+                                        ВСЕГО
+                                    </td>
+                                    <td class="text-right" colspan="2">
+                                        352 000 руб.
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        @*<div class="terms">
+                            <div class="terms-header">
+                                Terms and Conditions
+                            </div>
+                            <div class="terms-content">
+                                Should be paid as soon as received, otherwise a 5% penalty fee is applied
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="invoice-footer">
+                    <div class="invoice-logo">
+                        <img alt="" src="img/logo.png"><span>ООО "Вендинг-Экспресс"</span>
+                    </div>
+                    <div class="invoice-info">
+                        <span>dir@vending.ru</span><span>8 (918) 45-81-155</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
