@@ -1,5 +1,5 @@
 ﻿@page
-@model AutomatonsModel
+@model VendingExpress.Web.Pages.AutomatonsModel
 @{
     ViewData["Title"] = "Заказ кофейных и снековых автоматов";
 }
@@ -18,8 +18,8 @@
 <div class="content-i">
     <div class="content-box" style="padding-top: 1em;">
         @*<div style="padding-bottom: 1.5em;">
-            <strong></strong>
-        </div>*@
+                <strong></strong>
+            </div>*@
         <div class="alert alert-info" role="alert">
             Выберите автомат и предложение поставщика для заказа товара. Укажите количество автоматов для оформления заявки.
         </div>
@@ -55,7 +55,7 @@
                                                 <div class="cell-img automat-size" style="background-image: url(img/products/automat2.jpg)"></div>
                                             </div>
                                         </td>
-                                        <td class="font-sm">
+                                        <td class="font-sm" style="background: #eee;">
                                             Кофейный автомат<br /> Saeco Cristallo 600
                                         </td>
                                     </tr>
@@ -89,7 +89,7 @@
                                                 <div class="cell-img automat-size" style="background-image: url(img/products/automat5.jpg)"></div>
                                             </div>
                                         </td>
-                                        <td class="font-sm" style="background: #eee;">
+                                        <td class="font-sm">
                                             Кофейный автомат<br />
                                             Brio 3 ES6
                                         </td>
@@ -167,7 +167,7 @@
                     </h6>
                     <div class="element-box" style="height: 18.85em;">
                         <div style="margin: 0 0 1em 0em;">
-                            <span>Путассу сушеная соленая с перцем</span>
+                            <span>Кофейный автомат Saeco Cristallo 600</span>
                             <select class="form-control form-control-sm rounded" style="width: 20em;float: right;">
                                 <option selected="selected" value="">
                                     Точка доставки...
