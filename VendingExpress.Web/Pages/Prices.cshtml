@@ -1,12 +1,12 @@
 ﻿@page
-@model VendingExpress.Web.Pages.LeaseModel
+@model VendingExpress.Web.Pages.PricesModel
 @{
-    ViewData["Title"] = "Аренда площадей";
+    ViewData["Title"] = "Прайсы";
 }
 
 <ul class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="index.html">Аренда площадей</a>
+        <a href="index.html">Загруженные прайсы поставщиков</a>
     </li>
 </ul>
 <div class="content-i">
@@ -14,11 +14,10 @@
         <div class="element-wrapper">
             <div class="element-box">
                 <h5 class="form-header">
-                    Аренда площадей
+                    Прайсы поставщиков
                 </h5>
                 <div class="form-desc" style="margin-bottom: 0.5em;">
-                    <button type="button" class="btn btn-primary">Добавить</button>
-                    &nbsp; Список договоров с арендодателями для установки кофейных и снековых автоматов.
+                    <button type="button" class="btn btn-primary">Загрузить прайс</button>
                 </div>
 
                 <div class="table-responsive">
@@ -29,7 +28,6 @@
                                     <label>
                                         Показать
                                         <select name="dataTable1_length" aria-controls="dataTable1" class="form-control form-control-sm">
-                                            <option value="5">5</option>
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
@@ -48,45 +46,48 @@
                                 <table id="dataTable" width="100%" class="table table-striped table-lightfont dataTable" role="grid" aria-describedby="dataTable1_info" style="width: 100%;">
                                     <thead>
                                         <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending">Арендодатель</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Расположение</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Контакты</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Действия</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending">Поставщик</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Формат согласован</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Ценовая колонка</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Способ предоставления</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Дата обработки</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr role="row" class="odd">
-                                            <td class="sorting_1">Администрация ТЦ Галактика</td>
-                                            <td>ТЦ Галактика 2 этаж</td>
-                                            <td>Потолков А.М. 8 (900) 26-98-152</td>
-                                            <td>
-                                                <i class="icon-pencil text-success"></i>
-                                                <a href="#"><i class="icon-printer text-warning"></i></a>
-                                                <a href="#"><i class="icon-arrow-down-circle text-info"></i></a>
-                                                <i class="icon-trash text-danger"></i>
-                                            </td>
+                                            <td class="sorting_1">ООО «Штраус»</td>
+                                            <td class="text-cnter"><span class="badge badge-success">.DBF ANCII</span></td>
+                                            <td>PRICE012</td>
+                                            <td><span class="badge badge-warning">E-MAIL</span></td>
+                                            <td>22.01.2018</td>
                                         </tr>
                                         <tr role="row" class="even">
-                                            <td class="sorting_1">Администрация ТЦ Оз Молл</td>
-                                            <td>ТЦ Оз Молл 1 этаж</td>
-                                            <td class="">Куртинов П.П. 8 (918) 65-48-751</td>
-                                            <td>
-                                                <i class="icon-pencil text-success"></i>
-                                                <a href="#"><i class="icon-printer text-warning"></i></a>
-                                                <a href="#"><i class="icon-arrow-down-circle text-info"></i></a>
-                                                <i class="icon-trash text-danger"></i>
-                                            </td>
+                                            <td class="sorting_1">ООО «Лотос-Лэнд»</td>
+                                            <td class="text-centr"><span class="badge badge-success">EXCEL</span></td>
+                                            <td>PRICE_VEND1</td>
+                                            <td><span class="badge badge-info">FTP</span></td>
+                                            <td>08.02.2018</td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">ООО «Омни-Юг»</td>
+                                            <td class="text-cener"><span class="badge badge-danger">НЕТ</span></td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">ООО «Реликт»</td>
+                                            <td class="text-cener"><span class="badge badge-success">.DBF ANCII</span></td>
+                                            <td>PRICE</td>
+                                            <td><span class="badge badge-warning">E-MAIL</span></td>
+                                            <td>14.01.2018</td>
                                         </tr>
                                         <tr role="row" class="even">
-                                            <td class="sorting_1">Администрация ТЦ Карнавал</td>
-                                            <td>ТЦ Карнавал 1 этаж</td>
-                                            <td class="">Еривегов Г.Д. 8 (928) 32-23-651</td>
-                                            <td>
-                                                <i class="icon-pencil text-success"></i>
-                                                <a href="#"><i class="icon-printer text-warning"></i></a>
-                                                <a href="#"><i class="icon-arrow-down-circle text-info"></i></a>
-                                                <i class="icon-trash text-danger"></i>
-                                            </td>
+                                            <td class="sorting_1">ООО «Фирма ВАЛЕО»</td>
+                                            <td class="text-ceter"><span class="badge badge-success">.DBF OEM</span></td>
+                                            <td>PRICE2N</td>
+                                            <td><span class="badge badge-warning">E-MAIL</span></td>
+                                            <td>07.03.2018</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -94,21 +95,21 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-5">
-                                <div class="dataTables_info" id="dataTable1_info" role="status" aria-live="polite">Показано от 1 до 3 из 3 записей</div>
+                                <div class="dataTables_info" id="dataTable1_info" role="status" aria-live="polite">Показано от 1 до 5 из 5 записей</div>
                             </div>
                             <div class="col-sm-12 col-md-7">
                                 <div class="dataTables_paginate paging_simple_numbers" id="dataTable1_paginate">
                                     <ul class="pagination">
-                                        <li class="paginate_button page-item previous disabled" id="dataTable1_previous">
+                                        @*<li class="paginate_button page-item previous disabled" id="dataTable1_previous">
                                             <a href="#" aria-controls="dataTable1" data-dt-idx="0" tabindex="0" class="page-link">Предыдущая</a>
-                                        </li>
+                                        </li>*@
                                         <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
                                         @*<li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
                                             <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
                                             <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
                                             <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
                                             <li class="paginate_button page-item "><a href="#" aria-controls="dataTable1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>*@
-                                        <li class="paginate_button page-item next" id="dataTable1_next"><a href="#" aria-controls="dataTable1" data-dt-idx="7" tabindex="0" class="page-link">Следующая</a></li>
+                                        @*<li class="paginate_button page-item next" id="dataTable1_next"><a href="#" aria-controls="dataTable1" data-dt-idx="7" tabindex="0" class="page-link">Следующая</a></li>*@
                                     </ul>
                                 </div>
                             </div>
